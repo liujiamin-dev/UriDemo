@@ -2,6 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="com.konka.service.sharedpreference.SwitchProvider.read"/>
+    <uses-permission android:name="com.konka.service.sharedpreference.SwitchProvider.write"/>
+    <uses-permission android:name="android.permission.READ_USER_DICTIONARY"/>
+
+    <queries>
+        <package android:name="com.konka.service"/>
+        <provider android:authorities="com.konka.service.provider"/>
+    </queries>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -24,7 +33,7 @@
 <!--            </intent-filter>-->
         </activity>
 
-        <activity android:name=".WelcomeActivity"
+        <activity android:name=".ShareperferenceDemoActivity"
             android:theme="@style/appTheme"
             android:exported="true">
             <intent-filter>

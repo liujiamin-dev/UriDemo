@@ -1,21 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+            name="switchStr"
+            type="String" />
+        <variable
+            name="deviceName"
+            type="String" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
+        <RadioGroup
+            android:id="@+id/rg_getSwitch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:text="welcome"/>
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_open"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="open"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/rb_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="close" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tv_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rg_getSwitch"
+            android:layout_marginTop="10dp"
+            android:text="@{switchStr}"
+            tools:text="true"/>
+
+        <EditText
+            android:id="@+id/et_device_name"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_switch" />
+
+        <Button
+            android:id="@+id/btn_device_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/et_device_name"
+            app:layout_constraintTop_toTopOf="@id/et_device_name"
+            app:layout_constraintBottom_toBottomOf="@id/et_device_name"
+            android:layout_marginStart="10dp"
+            android:text="更新名称"/>
+
+        <TextView
+            android:id="@+id/tv_device_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/et_device_name"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="10dp"
+            android:text="@{deviceName}"
+            tools:text="unknown"/>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
