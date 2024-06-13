@@ -34,6 +34,12 @@
             android:readPermission="com.konka.service.sharedpreference.SwitchProvider.read"
             android:writePermission="com.konka.service.sharedpreference.SwitchProvider.write"/>
 
+        <provider
+            android:authorities="com.konka.service.sqliteprovider"
+            android:name="com.konka.service.sqlite.SqliteContentProvider"
+            android:enabled="true"
+            android:exported="true"/>
+
     </application>
 
 </manifest>
