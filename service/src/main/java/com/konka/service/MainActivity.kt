@@ -1,6 +1,7 @@
 package com.konka.service
 
 import android.content.Context
+import android.content.Intent
 import android.hardware.Sensor
 import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
@@ -8,6 +9,7 @@ import android.hardware.SensorManager
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.konka.service.databinding.ActivityMainBinding
+import com.konka.service.file.FileShareActivity
 import kotlin.math.abs
 import kotlin.math.pow
 import kotlin.math.sqrt
@@ -25,7 +27,14 @@ class MainActivity: AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         getSensorData()
+
+        binding.btnShareFile.setOnClickListener {
+            val intent = Intent(this, FileShareActivity::class.java)
+            startActivity(intent)
+        }
     }
+
+
 
     override fun onDestroy() {
         super.onDestroy()

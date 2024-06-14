@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <files-path
+        name="inner_app_path"
+        path="/"/>
+
+    <external-path
+        name="external_path"
+        path="/" />
+
+</paths>

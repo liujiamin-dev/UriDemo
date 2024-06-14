@@ -15,16 +15,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:text="service"/>
-
-        <Button
-            android:id="@+id/btn_share_file"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="50dp"
-            android:text="share_file"/>
+            android:text="file"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

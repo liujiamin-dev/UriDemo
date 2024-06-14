@@ -7,6 +7,10 @@
     <permission android:name="com.konka.service.sharedpreference.SwitchProvider.write"
         android:protectionLevel="normal"/>
 
+    <queries>
+        <package android:name="com.konka.uridemo"/>
+    </queries>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -26,6 +30,9 @@
 
         </activity>
 
+        <activity android:name=".file.FileShareActivity"
+            android:exported="false"/>
+
         <provider
             android:authorities="com.konka.service.provider"
             android:name="com.konka.service.sharedpreference.SwitchProvider"
@@ -39,6 +46,16 @@
             android:name="com.konka.service.sqlite.SqliteContentProvider"
             android:enabled="true"
             android:exported="true"/>
+        
+        <provider
+            android:authorities="com.konka.service.fileprovider"
+            android:name="androidx.core.content.FileProvider"
+            android:grantUriPermissions="true"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+        </provider>
 
     </application>
 
