@@ -5,6 +5,10 @@
     <uses-permission android:name="com.konka.service.sharedpreference.SwitchProvider.read"/>
     <uses-permission android:name="com.konka.service.sharedpreference.SwitchProvider.write"/>
     <uses-permission android:name="android.permission.READ_USER_DICTIONARY"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
 
     <queries>
         <package android:name="com.konka.service"/>
@@ -12,6 +16,7 @@
     </queries>
 
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -33,6 +38,17 @@
 <!--            </intent-filter>-->
         </activity>
 
+        <activity android:name=".HomeActivity"
+            android:theme="@style/appTheme"
+            android:exported="true">
+                <intent-filter>
+                    <action android:name="android.intent.action.MAIN" />
+
+                    <category android:name="android.intent.category.LAUNCHER" />
+                </intent-filter>
+
+        </activity>
+
         <activity android:name=".ShareperferenceDemoActivity"
             android:theme="@style/appTheme"
             android:exported="true">
@@ -47,11 +63,11 @@
         <activity android:name=".SqliteDemoActivity"
             android:theme="@style/appTheme"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
 
         </activity>
 
