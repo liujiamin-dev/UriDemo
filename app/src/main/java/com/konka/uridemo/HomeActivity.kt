@@ -6,6 +6,8 @@ import android.content.pm.PackageManager
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
+import com.konka.uridemo.classuser.UriDemoActivity
+import com.konka.uridemo.classuser.UrlDemoActivity
 import com.konka.uridemo.databinding.ActivityHomeBinding
 import io.github.album.EasyAlbum
 import io.github.album.MediaData
@@ -50,6 +52,16 @@ class HomeActivity: AppCompatActivity() {
                 } else {
                     ActivityCompat.requestPermissions(this@HomeActivity, notPerssions.toTypedArray(), 1001)
                 }
+            }
+
+            btnUrl.setOnClickListener {
+                val intent = Intent(this@HomeActivity, UrlDemoActivity::class.java)
+                startActivity(intent)
+            }
+
+            btnUri.setOnClickListener {
+                val intent = Intent(this@HomeActivity, UriDemoActivity::class.java)
+                startActivity(intent)
             }
         }
     }

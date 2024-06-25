@@ -4,6 +4,7 @@ import android.database.Cursor;
 import android.os.*;
 import android.net.Uri;
 import android.provider.MediaStore;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 
@@ -370,6 +371,10 @@ final class MediaLoader {
                     int orientation = cursor.getInt(IDX_ORIENTATION);
                     item.rotate = (orientation == 90 || orientation == 270) ? MediaData.ROTATE_YES : MediaData.ROTATE_NO;
                 }
+
+                Log.i(TAG, "id:"+id+" path:"+path+" type:"+type+" time:"+time+" parent:"+parent+" name:"+name+" mime:"+item.mime+" duration:"+item.duration+ " fileSize:"+item.fileSize
+                        +" width:"+item.width+" height:"+item.height+" rotate:"+item.rotate);
+
                 list.add(item);
             }
         } finally {

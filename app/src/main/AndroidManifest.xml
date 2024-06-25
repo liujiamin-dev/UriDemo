@@ -79,6 +79,12 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".classuser.UrlDemoActivity"
+            android:theme="@style/appTheme"/>
+
+        <activity android:name=".classuser.UriDemoActivity"
+            android:theme="@style/appTheme"/>
     </application>
 
 </manifest>
