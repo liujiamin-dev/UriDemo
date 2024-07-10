@@ -85,6 +85,9 @@
 
         <activity android:name=".classuser.UriDemoActivity"
             android:theme="@style/appTheme"/>
+
+        <activity android:name=".security.SecurityActivity"
+            android:theme="@style/appTheme"/>
     </application>
 
 </manifest>

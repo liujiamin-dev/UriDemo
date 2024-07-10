@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId = "com.konka.uridemo"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -75,4 +75,6 @@ dependencies {
 
     implementation("io.github.billywei01:doodle:2.1.5")
     implementation(project(":easyalbum"))
+
+    implementation("commons-codec:commons-codec:1.15")
 }

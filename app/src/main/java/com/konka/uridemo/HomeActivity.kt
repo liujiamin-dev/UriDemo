@@ -9,6 +9,7 @@ import androidx.core.app.ActivityCompat
 import com.konka.uridemo.classuser.UriDemoActivity
 import com.konka.uridemo.classuser.UrlDemoActivity
 import com.konka.uridemo.databinding.ActivityHomeBinding
+import com.konka.uridemo.security.SecurityActivity
 import io.github.album.EasyAlbum
 import io.github.album.MediaData
 import io.github.album.interfaces.MediaFilter
@@ -61,6 +62,11 @@ class HomeActivity: AppCompatActivity() {
 
             btnUri.setOnClickListener {
                 val intent = Intent(this@HomeActivity, UriDemoActivity::class.java)
+                startActivity(intent)
+            }
+
+            btnSecurity.setOnClickListener {
+                val intent = Intent(this@HomeActivity, SecurityActivity::class.java)
                 startActivity(intent)
             }
         }

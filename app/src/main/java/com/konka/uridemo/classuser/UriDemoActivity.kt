@@ -10,7 +10,7 @@ import java.net.URLEncoder
 
 /**
  * @CreateTime : 2024/6/25 11:40
- * @Author : Administrator
+ * @Author : ljm
  * @Description :
  */
 class UriDemoActivity: AppCompatActivity() {
@@ -24,10 +24,11 @@ class UriDemoActivity: AppCompatActivity() {
         encode("content", "刘亦菲")
         val uriStr = "https://www.google.com/search${mParams.toString()}"
         Log.i(TAG, "uriStr: $uriStr")
-        Log.i(TAG, "decode uriStr: ${URLDecoder.decode(uriStr, "UTF-8")}")
+        Log.i(TAG, "decode uriStr: ${URLDecoder.decode(uriStr, "UTF-8")}")     //解码
         getUriInfo(URI(uriStr))
     }
 
+    //编码
     private fun encode(name: String, value: String) {
         if(mParams.isEmpty()) {
             mParams.append("?")
