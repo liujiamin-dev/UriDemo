@@ -53,6 +53,7 @@ android {
 }
 
 dependencies {
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
     implementation ("androidx.constraintlayout:constraintlayout:2.1.3")
     //noinspection GradleCompatible
     implementation ("androidx.appcompat:appcompat:1.3.1")

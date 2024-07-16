@@ -10,6 +10,7 @@ import com.konka.uridemo.classuser.UriDemoActivity
 import com.konka.uridemo.classuser.UrlDemoActivity
 import com.konka.uridemo.databinding.ActivityHomeBinding
 import com.konka.uridemo.security.SecurityActivity
+import com.konka.uridemo.udpclient.UdpClientActivity
 import io.github.album.EasyAlbum
 import io.github.album.MediaData
 import io.github.album.interfaces.MediaFilter
@@ -67,6 +68,11 @@ class HomeActivity: AppCompatActivity() {
 
             btnSecurity.setOnClickListener {
                 val intent = Intent(this@HomeActivity, SecurityActivity::class.java)
+                startActivity(intent)
+            }
+
+            btnUdp.setOnClickListener {
+                val intent = Intent(this@HomeActivity, UdpClientActivity::class.java)
                 startActivity(intent)
             }
         }

@@ -10,6 +10,7 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.konka.service.databinding.ActivityMainBinding
 import com.konka.service.file.FileShareActivity
+import com.konka.service.udpservice.UdpServiceActivity
 import kotlin.math.abs
 import kotlin.math.pow
 import kotlin.math.sqrt
@@ -30,6 +31,11 @@ class MainActivity: AppCompatActivity() {
 
         binding.btnShareFile.setOnClickListener {
             val intent = Intent(this, FileShareActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnUdpService.setOnClickListener {
+            val intent = Intent(this, UdpServiceActivity::class.java)
             startActivity(intent)
         }
     }

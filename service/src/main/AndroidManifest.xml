@@ -7,6 +7,8 @@
     <permission android:name="com.konka.service.sharedpreference.SwitchProvider.write"
         android:protectionLevel="normal"/>
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <queries>
         <package android:name="com.konka.uridemo"/>
     </queries>
@@ -56,6 +58,9 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths"/>
         </provider>
+
+        <activity android:name=".udpservice.UdpServiceActivity"
+            android:theme="@style/appTheme"/>
 
     </application>
 

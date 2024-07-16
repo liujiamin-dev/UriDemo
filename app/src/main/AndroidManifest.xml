@@ -9,6 +9,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <queries>
         <package android:name="com.konka.service"/>
@@ -87,6 +88,9 @@
             android:theme="@style/appTheme"/>
 
         <activity android:name=".security.SecurityActivity"
+            android:theme="@style/appTheme"/>
+
+        <activity android:name=".udpclient.UdpClientActivity"
             android:theme="@style/appTheme"/>
     </application>
 
