@@ -34,5 +34,13 @@
             app:layout_constraintTop_toBottomOf="@+id/btn_share_file"
             android:text="udp"/>
 
+        <Button
+            android:id="@+id/btn_installer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_udp_service"
+            android:text="installer"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -8,6 +8,7 @@ import android.hardware.SensorEventListener
 import android.hardware.SensorManager
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import com.konka.service.apkinstall.InstallerActivity
 import com.konka.service.databinding.ActivityMainBinding
 import com.konka.service.file.FileShareActivity
 import com.konka.service.udpservice.UdpServiceActivity
@@ -27,7 +28,7 @@ class MainActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        getSensorData()
+//        getSensorData()
 
         binding.btnShareFile.setOnClickListener {
             val intent = Intent(this, FileShareActivity::class.java)
@@ -36,6 +37,11 @@ class MainActivity: AppCompatActivity() {
 
         binding.btnUdpService.setOnClickListener {
             val intent = Intent(this, UdpServiceActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnInstaller.setOnClickListener {
+            val intent = Intent(this, InstallerActivity::class.java)
             startActivity(intent)
         }
     }
